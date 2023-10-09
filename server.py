@@ -26,6 +26,8 @@ while True:
         print("Отримано від клієнта: '{}'".format(data))
         print("Час отримання: {}".format(current_time))
 
+        if data.lower() == 'exit':
+            break
 
         import time
         time.sleep(5)
@@ -34,5 +36,6 @@ while True:
         client_socket.send(response.encode('utf-8'))
 
     client_socket.close()
+    break
 
 server_socket.close()
