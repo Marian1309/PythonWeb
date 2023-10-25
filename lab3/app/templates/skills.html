@@ -10,19 +10,22 @@
 <body>
     {% extends "base.html" %}
     {% block content %}
-    {% if s_id != None %}
-    <h1 class="title">{{ my_skills.get(s_id) }}</h1>
-    {% else %}
+    {% if s_id == None %}
     <nav>
-        <label for="skills" class="title">My skills: </label>
-
-        <ul id="skills" class="skills">
-            {% for skill in range(1, skills_amount) %}
-            <li>{{ my_skills.get(skill)}}</li>
+        <ul name="skills" class="skills">
+            <label class="title" for="skills">My skills: </label>
+            {% for s_id, (name,desc) in my_skills.items() %}
+            <li>
+                <a href="{{ url_for('skills', s_id=s_id) }}">{{ name }}</a>
+            </li>
             {% endfor %}
         </ul>
     </nav>
+    {% else %}
+    <h1 class="title">{{ my_skills.get(s_id)[0] }}</h1>
+    <p class="skill-desc">{{ my_skills.get(s_id)[1] }}</p>
     {% endif %}
+
     {% endblock %}
 </body>
 

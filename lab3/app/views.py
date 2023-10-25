@@ -46,6 +46,6 @@ def albums():
 def skills(s_id=None):
     title = "My skills"
     if s_id is not None:
-        title = title.rstrip("s")
+        title = title.rstrip("r")
     my_skills = data.my_skills
     return render_template("skills.html", title=title, my_skills=my_skills, s_id=s_id)

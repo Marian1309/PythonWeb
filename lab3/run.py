@@ -1,4 +1,4 @@
-from lab3.app.app import app
+from lab3.app.views import app
 
 if __name__ == '__main__':
     app.run(debug=True)
