@@ -24,5 +24,5 @@
 
 <h3>lab3</h3>
 
-![lab2](/screenshots/lab3/1.png)
-![lab2](/screenshots/lab3/2.png)
+![lab3](/screenshots/lab3/1.png)
+![lab3](/screenshots/lab3/2.png)
