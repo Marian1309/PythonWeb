@@ -26,3 +26,4 @@
 
 ![lab3](/screenshots/lab3/1.png)
 ![lab3](/screenshots/lab3/2.png)
+![lab3](/screenshots/lab3/3.png)
