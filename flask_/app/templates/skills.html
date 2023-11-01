@@ -13,7 +13,7 @@
     {% if s_id == None %}
     <nav>
         <ul name="skills" class="skills">
-            <label class="title" for="skills">My skills: </label>
+            <label class="title" >My skills: </label>
             {% for s_id, (name,desc) in my_skills.items() %}
             <li>
                 <a href="{{ url_for('skills', s_id=s_id) }}">{{ name }}</a>

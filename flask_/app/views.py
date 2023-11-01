@@ -1,7 +1,7 @@
 import platform
 from datetime import datetime
 
-from lab3.data import data
+from flask_.data import data
 from flask import request, render_template, Flask
 
 app = Flask(__name__)
