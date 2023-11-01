@@ -1,7 +1,7 @@
 import platform
 from datetime import datetime
 
-from flask_.data import data
+from flask_.app import data
 from flask import request, render_template, Flask
 
 app = Flask(__name__)
@@ -49,3 +49,11 @@ def skills(s_id=None):
         title = title.rstrip("r")
     my_skills = data.my_skills
     return render_template("skills.html", title=title, my_skills=my_skills, s_id=s_id)
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    title = "Login"
+    if request.method == "POST":
+        return render_template("login.html", title=title)
+    return render_template("login.html", title=title)

@@ -1,11 +1,9 @@
 {% extends "base.html" %}
-
 {% block title %}
 {{ super() }}
 {% endblock %}
+{% include "styles.html" %}
 
 {% block content %}
-
-<h1 class="title">Contact</h1>
-
+<h1 class="title"> {{ error }}</h1>
 {% endblock %}
